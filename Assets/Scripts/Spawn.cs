@@ -37,13 +37,12 @@ public class Spawn : MonoBehaviour
         GameObject c = Instantiate(circle) as GameObject;
         c.GetComponent<Object>().SetPoint((int)Point.TWO);
 
-        s.transform.position = new Vector3(Random.Range(-screenBouds.x+0.5f, screenBouds.x-0.5f), Random.Range(-screenBouds.y+0.75f, screenBouds.y-0.75f), 10);
-        c.transform.position = new Vector3(Random.Range(-screenBouds.x + 0.5f, screenBouds.x - 0.5f), Random.Range(-screenBouds.y + 0.75f, screenBouds.y - 0.75f), 10);
+        s.transform.position = new Vector3(Random.Range(-screenBouds.x+0.75f, screenBouds.x-0.75f), Random.Range(-screenBouds.y+0.75f, screenBouds.y-0.75f), 10);
+        c.transform.position = new Vector3(Random.Range(-screenBouds.x + 0.75f, screenBouds.x - 0.75f), Random.Range(-screenBouds.y + 0.75f, screenBouds.y - 0.75f), 10);
         
 
         for (int i = 0; i< numOfFake; i++)
         {
-            float delay = 1f * (i + 2);
             GameObject fk = Instantiate(Random.Range(SQUARE, CIRCLE) == SQUARE ? square : circle) as GameObject;
             fk.GetComponent<Object>().SetPoint((int)Point.ZERO);
 

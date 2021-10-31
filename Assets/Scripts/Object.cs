@@ -5,8 +5,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     int point;
-    GameObject prefab;
-    float delay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +24,6 @@ public class Object : MonoBehaviour
     public int GetPoint()
     {
         return point;
-    }
-
-    public void SetPrefab(GameObject prefab)
-    {
-        this.prefab = prefab;
-    }
-    public GameObject GetPrefab()
-    {
-        return prefab;
     }
 
 }
